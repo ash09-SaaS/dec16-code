@@ -7,8 +7,5 @@ node() {
                {
     sh 'mvn package'
                }
-    stage('Deploy on tomcat server') 
-               {
-    deploy adapters: [tomcat9(credentialsId: '6eb9749c-44a7-4b93-9096-cd8188e0d76e', path: '', url: 'http://3.101.53.109:8080/')], contextPath: '/jenkinsdevapp', war: '**/*.war'
-               }
+    
        }
